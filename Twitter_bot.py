@@ -32,9 +32,15 @@ def reply_to_tweets():
           print(str(mention.id)+" "+mention.text,flush=True)
           last_tweet_id=str(mention.id)
           write_last_id(file,last_tweet_id)
-          if "#helloworld" in mention.text.lower():
+          if "#helloworld" in mention.text.lower():   
               print("found Hello world!\nWaving you back user ......",flush=True)
               api.update_status("@"+mention.user.screen_name+" "+"Hello world waving back to you !",mention.id)
+          if "#hello" in mention.text.lower():
+              print("found hello \nWaving you back user ......",flush=True)
+              api.update_status("@"+mention.user.screen_name+" "+"Hello buddy waving back  you !",mention.id)
+          if "#test" in mention.text.lower():
+              print("matching content found \nWaving you back user ......",flush=True)
+              api.update_status("@"+mention.user.screen_name+" "+"this is a bot replyed to the tweet successfully",mention.id)
 
 while True:                   #infinite loop
     reply_to_tweets()
