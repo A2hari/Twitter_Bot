@@ -11,3 +11,4 @@
 * now add coppy the keys in the source file 
 * now host the source keys in the terminl(make sure that you have active internet) or use cloud and host it on the cloud
 * that it your twitter bot is ready
+* use your own last tweet id you can get your last tweet by running the same code and replace it in the .txt file
